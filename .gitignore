@@ -9,6 +9,9 @@
 # production
 /build
 
+# snapshots
+*.snap
+
 # misc
 /old
 .DS_Store

@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import { saveAs } from 'file-saver';
 import _ from 'lodash';
 
-// import NumberList from './NumberList';
-
 class Numbers extends Component {
   state = {
     numberLength: 10,
@@ -163,17 +161,6 @@ class Numbers extends Component {
             </div>
           }
         </div>
-
-        {
-          numbers.length > 0
-          // && <NumberList
-          //     handlePageClick={this.handlePageClick}
-          //     handleSortClick={this.handleSortClick}
-          //     numbers={numbersToShow}
-          //     order={order}
-          //     pagination={pagination}
-          //     sort={sort} />
-        }
       </div>
     );
   }
