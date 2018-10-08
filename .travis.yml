@@ -1,14 +1,15 @@
 language: node_js
- node_js:
+
+node_js:
   - '10'
- sudo: false
- before_install:
+sudo: false
+before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash
   - export PATH="$HOME/.yarn/bin:$PATH"
- cache:
+cache:
   yarn: true
   directories:
     - '.eslintcache'
     - 'node_modules'
- script:
+script:
   - yarn test --updateSnapshot && cat ./coverage/lcov.info | coveralls
