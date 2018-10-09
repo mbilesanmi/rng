@@ -7,7 +7,7 @@ import NumberList from './NumberList';
 
 class Numbers extends Component {
   state = {
-    numberLength: 10,
+    numberLength: 9,
     numbers: [],
     numbersToShow: [],
     page: 1,
