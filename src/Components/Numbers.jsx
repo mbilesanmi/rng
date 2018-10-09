@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import { saveAs } from 'file-saver';
 import _ from 'lodash';
 
+import NumberList from './NumberList';
+
 class Numbers extends Component {
   state = {
     numberLength: 10,
@@ -58,7 +60,7 @@ class Numbers extends Component {
       page
     } = this.state;
 
-    const per_page = 10;
+    const per_page = 20;
     const offset = (page - 1) * per_page;
     const paginatedNums = _.drop(numbers, offset).slice(0, per_page);
 
@@ -161,6 +163,17 @@ class Numbers extends Component {
             </div>
           }
         </div>
+
+        {
+          numbers.length > 0
+          && <NumberList
+              handlePageClick={this.handlePageClick}
+              handleSortClick={this.handleSortClick}
+              numbers={numbersToShow}
+              order={order}
+              pagination={pagination}
+              sort={sort} />
+        }
       </div>
     );
   }
