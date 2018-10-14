@@ -3,6 +3,7 @@
 
 # Random Number Generator
 This app generates unique random phone numbers with length of 10 digits (all starting with zero).
+To view the app, visit [RNG](https://mai-rng.herokuapp.com)
 
 #### Features
 ---
